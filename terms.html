@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - ParAdvisoryTips</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.9), rgba(118, 75, 162, 0.9));
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            padding: 60px 0 80px;
+            margin-top: -30px;
+            border-radius: 30px 30px 0 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .terms-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .last-updated {
+            background: linear-gradient(135deg, #e8f4fd, #f0f8ff);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .last-updated p {
+            margin: 0;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .terms-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(145deg, #f8f9ff, #e8f0ff);
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .terms-section h2 {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .terms-section h3 {
+            font-size: 1.3rem;
+            color: #333;
+            margin: 1.5rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .terms-section p {
+            margin-bottom: 1rem;
+            color: #555;
+            text-align: justify;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 1rem 0 1rem 2rem;
+            color: #555;
+        }
+
+        .terms-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h4 {
+            color: #b8860b;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: #ffdd59;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            .terms-section {
+                padding: 1.5rem;
+            }
+
+            .terms-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .terms-content {
+                padding: 0 15px;
+            }
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .floating-elements::before,
+        .floating-elements::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-elements::before {
+            background: white;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-elements::after {
+            background: white;
+            bottom: 10%;
+            right: 5%;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">ParAdvisoryTips</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#tips">Tips</a></li>
+                <li><a href="index.html#book">Our Book</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="floating-elements"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Terms and Conditions</h1>
+                <p>Please read these terms carefully before using our services</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="terms-content">
+            <a href="index.html" class="back-button">
+                <span>←</span> Back to Home
+            </a>
+
+            <div class="last-updated">
+                <p><strong>Last Updated:</strong> May 29, 2025</p>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">📋</span>Acceptance of Terms</h2>
+                <p>By accessing and using the ParAdvisoryTips website, purchasing our book, or using any of our services, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions.</p>
+                <p>If you do not agree with any part of these terms, you must not use our website or services.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">📖</span>Book Purchase and Delivery</h2>
+                
+                <h3>Order Process</h3>
+                <ul>
+                    <li>Orders are placed through our contact form on the website</li>
+                    <li>We will contact you within 24 hours to confirm your order</li>
+                    <li>Payment instructions will be provided after order confirmation</li>
+                    <li>Books are shipped within 3-5 business days after payment confirmation</li>
+                </ul>
+
+                <h3>Pricing and Payment</h3>
+                <ul>
+                    <li>All prices are listed in USD and include applicable taxes</li>
+                    <li>Payment methods accepted: PayPal, Bank Transfer, and other methods as specified</li>
+                    <li>Prices are subject to change without notice</li>
+                    <li>Full payment is required before book shipment</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h4>Important:</h4>
+                    <p>Orders are not considered confirmed until you receive our email confirmation. We reserve the right to cancel orders that cannot be fulfilled.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">📦</span>Shipping and Returns</h2>
+                
+                <h3>Shipping Policy</h3>
+                <ul>
+                    <li>We ship internationally to most countries</li>
+                    <li>Shipping costs vary by location and will be communicated during order confirmation</li>
+                    <li>Delivery timeframes are estimates and may vary due to postal service delays</li>
+                    <li>Risk of loss passes to you upon delivery to the shipping address</li>
+                </ul>
+
+                <h3>Returns and Refunds</h3>
+                <ul>
+                    <li>Books may be returned within 30 days of delivery if damaged or defective</li>
+                    <li>Return shipping costs are the responsibility of the customer unless the book arrived damaged</li>
+                    <li>Refunds will be processed within 10 business days of receiving the returned item</li>
+                    <li>Books must be in original condition for return acceptance</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">⚖️</span>Intellectual Property</h2>
+                <p>All content on the ParAdvisoryTips website and in our book, including but not limited to text, graphics, logos, images, and software, is the property of ParAdvisoryTips or its content suppliers and is protected by copyright and other intellectual property laws.</p>
+                
+                <h3>Permitted Use</h3>
+                <ul>
+                    <li>You may read and use the parenting advice for personal, non-commercial purposes</li>
+                    <li>You may share general tips with friends and family</li>
+                    <li>You may not reproduce, distribute, or create derivative works without written permission</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">⚠️</span>Disclaimer of Warranties</h2>
+                <p>The information provided by ParAdvisoryTips is for educational and informational purposes only. While we strive to provide accurate and helpful parenting advice, we make no warranties about the completeness, reliability, or suitability of the information.</p>
+                
+                <div class="highlight-box">
+                    <h4>Medical and Professional Advice:</h4>
+                    <p>Our content is not intended to replace professional medical, psychological, or other professional advice. Always consult with qualified professionals for specific concerns about your child's health, development, or wellbeing.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">🛡️</span>Limitation of Liability</h2>
+                <p>To the fullest extent permitted by law, ParAdvisoryTips shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly.</p>
+                
+                <h3>Maximum Liability</h3>
+                <p>Our total liability to you for any claim arising from or relating to these terms or our services shall not exceed the amount you paid for our book or services.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">🔒</span>Privacy and Data Protection</h2>
+                <p>We collect and process personal information in accordance with our Privacy Policy. By using our services, you consent to the collection and use of your information as described in our Privacy Policy.</p>
+                
+                <h3>Information We Collect</h3>
+                <ul>
+                    <li>Contact information for order processing and communication</li>
+                    <li>Shipping addresses for book delivery</li>
+                    <li>Optional newsletter subscription preferences</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">🌐</span>Website Use</h2>
+                
+                <h3>Acceptable Use</h3>
+                <p>You agree to use our website only for lawful purposes and in accordance with these terms. You agree not to:</p>
+                <ul>
+                    <li>Use the website in any way that violates applicable laws or regulations</li>
+                    <li>Transmit any harmful, threatening, or offensive content</li>
+                    <li>Attempt to gain unauthorized access to our systems</li>
+                    <li>Interfere with the proper functioning of the website</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">📧</span>Communications</h2>
+                <p>By providing your contact information, you consent to receive communications from us regarding your order, our services, and optionally, our newsletter if you subscribe.</p>
+                
+                <h3>Opt-Out</h3>
+                <p>You may unsubscribe from marketing communications at any time by contacting us or using the unsubscribe link in our emails.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">🔄</span>Changes to Terms</h2>
+                <p>We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting on our website. Your continued use of our services after changes are posted constitutes acceptance of the modified terms.</p>
+                <p>We encourage you to review these terms periodically for any updates.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">⚖️</span>Governing Law</h2>
+                <p>These Terms and Conditions are governed by and construed in accordance with the laws of [Your Jurisdiction]. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of the courts in [Your Location].</p>
+                
+                <h3>Dispute Resolution</h3>
+                <p>We encourage resolving any disputes through direct communication. If formal resolution is needed, we prefer mediation before litigation.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2><span class="section-icon">📞</span>Termination</h2>
+                <p>We may terminate or suspend your access to our website and services immediately, without prior notice, if you breach these Terms and Conditions.</p>
+                <p>Upon termination, your right to use our services will cease immediately, but these terms will remain in effect regarding past transactions and obligations.</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>Questions About These Terms?</h3>
+                <p>If you have any questions about these Terms and Conditions, please contact us:</p>
+                <p><strong>Email:</strong> <a href="mailto:info@paradvisorytips.com">info@paradvisorytips.com</a></p>
+                <p><strong>Website:</strong> <a href="index.html">ParAdvisoryTips.com</a></p>
+                <p>We're here to help and will respond to your inquiries promptly.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ParAdvisoryTips. All rights reserved.</p>
+            <p>Contact us: info@paradvisorytips.com | Follow us on social media for daily tips!</p>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 8px 32px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation for sections
+        const sections = document.querySelectorAll('.terms-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
